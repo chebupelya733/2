@@ -4,7 +4,7 @@ import random
 from telebot import TeleBot, types
 from datetime import datetime, timedelta
 
-TOKEN = '8015734779:AAG9l-HFHRzlOde4QnW4yBkFfEiAnQI-zxA'
+TOKEN = os.getenv("TOKEN")
 bot = TeleBot(TOKEN)
 
 START_DATE = datetime(2025, 2, 15)
@@ -362,3 +362,4 @@ def load_data():
 
 load_data()
 bot.infinity_polling()
+
